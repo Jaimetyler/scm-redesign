@@ -9,6 +9,11 @@
   opacity: 0.5;
 }
 
+nav {
+  margin-top: 0;
+  text-align: right;
+}
+
 .card-img-top {
   border-radius: 2%;
 }
