@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Welcome to Firebase Hosting</title>
+    <title>Supply Chain Management</title>
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -40,10 +40,7 @@
     <!--NAVBAR -->
     <!-- Want to make this a sticky nav that is transparent until scroll and then like a black color with some level of opacity -->
 
-    <nav
-      class="navbar navbar-expand-lg navbar-dark bg-dark"
-      style="opacity: .50"
-    >
+    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
       <a class="navbar-brand" href="#">Logo</a>
       <button
         class="navbar-toggler"
@@ -91,6 +88,8 @@
           This is a modified jumbotron that occupies the entire horizontal space
           of its parent.
         </p>
+
+        <img class="app-image" src="./assets/images/IPHONE.png" />
       </div>
     </div>
 
@@ -119,7 +118,7 @@
             alt="placeholder"
           />
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
+            <h5 class="card-title">Title</h5>
             <p class="card-text">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text
@@ -136,7 +135,7 @@
             alt="placeholder"
           />
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
+            <h5 class="card-title">Title</h5>
             <p class="card-text">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text
@@ -152,7 +151,7 @@
             alt="placeholder"
           />
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
+            <h5 class="card-title">Title</h5>
             <p class="card-text">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text
@@ -166,16 +165,66 @@
 
     <!--Some Other Content  - Maybe some stats or some shit? -->
 
-    <div class="container">
-      <div class="row">
+    <div class="container" id="logistics-solutions">
+      <div class="row d-flex justify-content-center">
         <div class="col-md-4">
           <div class="card">
-            <img src=/>
+            <img
+              class="logistics-icon"
+              src="./assets/images/collaboration.png"
+            />
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
+              <h5 class="card-title">Title</h5>
               <p class="card-text">
-                This card has supporting text below as a natural lead-in to
-                additional content.
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img
+              class="logistics-icon"
+              src="./assets/images/collaboration.png"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Title</h5>
+              <p class="card-text">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-4">
+          <div class="card">
+            <img
+              class="logistics-icon"
+              src="./assets/images/collaboration.png"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Title</h5>
+              <p class="card-text">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img
+              class="logistics-icon"
+              src="./assets/images/collaboration.png"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Title</h5>
+              <p class="card-text">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard
               </p>
             </div>
           </div>
@@ -183,6 +232,27 @@
       </div>
     </div>
 
+    <!-- Some message about getting started or finding a solution -->
+
+    <div class="container" id="get-started">
+      <h3>
+        Get started finding your logsitics solution today.
+      </h3>
+      <h6>
+        Dont waste any time, bitch.Get started finding your logsitics solution
+        today. Dont waste any time, bitch.
+      </h6>
+
+      <button
+        type="button"
+        class="btn btn-outline-danger"
+        id="getStarted-button"
+      >
+        Do It Now
+      </button>
+    </div>
+    <!-- Footer -->
+    <footer class="bg-secondary text-white">@jtmcDesigns</footer>
     <script src="./assets/javascript/app.js"></script>
   </body>
 </html>

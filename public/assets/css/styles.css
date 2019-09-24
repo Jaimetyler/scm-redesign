@@ -6,6 +6,11 @@
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
+  opacity: 0.5;
+}
+
+.card-img-top {
+  border-radius: 2%;
 }
 
 #supplyChain {
@@ -14,6 +19,25 @@
   margin-bottom: 100px;
 }
 
+.logistics-icon {
+  height: 50px;
+  width: 50px;
+}
+
+#get-started {
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+#getStarted-button {
+  margin-top: 25px;
+}
+
 .card {
   border: none;
+}
+
+footer {
+  height: 150px;
 }
