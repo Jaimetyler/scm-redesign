@@ -1,17 +1,58 @@
 /* HEADER IMAGE W/ TEXT */
 .jumbotron {
   color: white;
-  background-image: url('https://images.unsplash.com/photo-1438109491414-7198515b166b?q=80&fm=jpg&s=cbdabf7a79c087a0b060670a6d79726c');
+  background-image: url('../images/sslpicsav.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
-  opacity: 0.5;
+  opacity: 0.7;
 }
+
+/*****VIDEO BACKGROUND JUMBOTRON*******/
+/* .jumbotron {
+  position: relative;
+  overflow: hidden;
+  background-color:black;
+}
+.jumbotron video {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  width:100%;
+  height:100%;
+  /*  object-fit is not supported on IE  */
+/* object-fit: cover;
+  opacity:0.5;
+}
+.jumbotron .container {
+  z-index: 2;
+  position: relative;
+} */
+
+/*****VIDEO BACKGROUND JUMBOTRON*******/
 
 nav {
   margin-top: 0;
-  text-align: right;
+}
+
+.nav-item {
+  margin-right: 0;
+}
+
+#navbarText {
+  font-weight: bold;
+  color: white;
+}
+
+#heading1 {
+  text-align: left;
+  margin-top: 200px;
+  font-size: 32pt;
+}
+
+.display {
+  font-size: 42pt;
 }
 
 .card-img-top {
@@ -27,6 +68,7 @@ nav {
 .logistics-icon {
   height: 50px;
   width: 50px;
+  margin: 15px;
 }
 
 #get-started {
@@ -36,11 +78,16 @@ nav {
 }
 
 #getStarted-button {
-  margin-top: 25px;
+  margin-top: 50px;
 }
 
 .card {
   border: none;
+}
+
+#logistics-solutions {
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 footer {
