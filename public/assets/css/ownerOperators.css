@@ -1,7 +1,7 @@
 /* HEADER IMAGE W/ TEXT */
 .jumbotron {
   color: white;
-  background-image: url('../images/sslpicsav.png');
+  background-image: url('../images/savportbackground.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -83,6 +83,11 @@ nav {
 
 .card {
   border: none;
+}
+
+#driver-pic {
+  height: 500px;
+  width: 250px;
 }
 
 #logistics-solutions {
