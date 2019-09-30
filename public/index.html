@@ -43,9 +43,8 @@
     <!--HEADER IMAGE WITH TEXT -->
     <!-- Need to find a good image maybe of savannah port or even our new facility -->
     <!-- Move text to the left of page on image, with maybe a button to get signed up as a carrier -->
-
-    <!-- this is a video background option -->
-    <!-- <div class="jumbotron jumbotron-fluid">
+<!-- this is a video background option -->
+<!-- <div class="jumbotron jumbotron-fluid">
       <video
         autoplay
         muted
@@ -83,21 +82,14 @@
         <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
       </div>
       <!-- /.container -->
-    </div> 
-    <!-- /.jumbotron -->
-    <!-- this is an image background option -->
-    <div class="jumbotron jumbotron-fluid">
-      <nav class="navbar navbar-expand-lg navbar-secondary bg-none">
-        <a class="navbar-brand" href="#"></a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarText"
-          aria-controls="navbarText"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
+</div>
+<!-- /.jumbotron -->
+<!-- this is an image background option -->
+<div class="jumbotron jumbotron-fluid">
+  <nav class="navbar navbar-expand-lg navbar-secondary bg-none">
+    <a class="navbar-brand" href="#"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+      aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse " id="navbarText">
@@ -312,50 +304,46 @@
               <div class="row">
                 <div class="col">
                   <div class="form-group">
-                    <label for="exampleFormControlInput1">First Name</label>
-                    <input type="name" class="form-control" id="exampleFormControlInput1" placeholder="Bob">
+                    <label for="firstName">First Name</label>
+                    <input type="name" class="form-control" id="firstName" placeholder="Bob">
                   </div>
                 </div>
                 <div class="col">
                   <div class="form-group">
-                    <label for="exampleFormControlInput1">Last Name</label>
-                    <input type="name" class="form-control" id="exampleFormControlInput1" placeholder="Ross">
+                    <label for="lastName">Last Name</label>
+                    <input type="name" class="form-control" id="lastName" placeholder="Ross">
                   </div>
                 </div>
 
               </div>
               <div class="form-group">
-                <label for="exampleFormControlInput1">Email address</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                <label for="company">Company</label>
+                <input type="email" class="form-control" id="company" placeholder="DickHouse">
               </div>
               <div class="form-group">
-                <label for="exampleFormControlSelect1">I am Looking to</label>
-                <select class="form-control" id="exampleFormControlSelect1">
-                  <option>Ship some shit</option>
+                <label for="emailAdress">Email address</label>
+                <input type="email" class="form-control" id="emailAdress" placeholder="name@example.com">
+              </div>
+              <div class="form-group">
+                <label for="serviceType">I am Looking to</label>
+                <select class="form-control" id="serviceType">
+                  <option>Ship a Commodity</option>
                   <option>Become a Carrier Partner</option>
                   <option>Lease on with SCMI</option>
                   <option>Some other shit</option>
                  
                 </select>
               </div>
+              
               <div class="form-group">
-                <label for="exampleFormControlSelect2">I want to</label>
-                <select multiple class="form-control" id="exampleFormControlSelect2">
-                  <option>Ship some shit</option>
-                  <option>Become a Carrier Partner</option>
-                  <option>Lease on with SCMI</option>
-                  <option>Some other shit</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="exampleFormControlTextarea1">Example textarea</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                <label for="comment">Example textarea</label>
+                <textarea class="form-control" id="comment" rows="3"></textarea>
               </div>
             </form>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Submit</button>
+            
+            <button type="button" class="btn btn-primary" id="submitButton">Submit</button>
           </div>
         </div>
       </div>
