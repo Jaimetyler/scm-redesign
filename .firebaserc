@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "scm2-94a82"
+    "default": "scm2-94a82",
+    "scm-redesign": "scm2-94a82"
   }
 }

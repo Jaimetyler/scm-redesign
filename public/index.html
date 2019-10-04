@@ -43,56 +43,23 @@
     <!--HEADER IMAGE WITH TEXT -->
     <!-- Need to find a good image maybe of savannah port or even our new facility -->
     <!-- Move text to the left of page on image, with maybe a button to get signed up as a carrier -->
-<!-- this is a video background option -->
-<!-- <div class="jumbotron jumbotron-fluid">
-      <video
-        autoplay
-        muted
-        loop
-        poster="https://dummyimage.com/900x400/000/fff"
-      >
-        <source
-          src="./assets/images/spiderVid.mp4"
-          data-src=""
-          type="video/mp4"
-        />
-        <source
-          src="./assets/images/spiderVid.mp4"
-          data-src=""
-          type="video/webm"
-        />
-        <source
-          src="./assets/images/spiderVid.mp4"
-          data-src=""
-          type="video/ogg"
-        />
-      </video>
 
-      <div class="container text-white">
-        <h1 class="display-4">Hello, world!</h1>
-        <p class="lead">
-          This is a simple hero unit, a simple jumbotron-style component for
-          calling extra attention to featured content or information.
-        </p>
-        <hr class="my-4" />
-        <p>
-          It uses utility classes for typography and spacing to space content
-          out within the larger container.
-        </p>
-        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-      </div>
-      <!-- /.container -->
-</div>
-<!-- /.jumbotron -->
-<!-- this is an image background option -->
-<div class="jumbotron jumbotron-fluid">
-  <nav class="navbar navbar-expand-lg navbar-secondary bg-none">
-    <a class="navbar-brand" href="#"></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
-      aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <!-- this is an image background -->
+    <div class="jumbotron jumbotron-fluid">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-none">
+        <a class="navbar-brand" href="#"></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarText"
+          aria-controls="navbarText"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse " id="navbarText">
+        <div class="collapse navbar-collapse" id="navbarText">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
               <a class="nav-link" href="./index.html"
@@ -111,7 +78,7 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./about.html ">About</a>
+              <a class="nav-link" href="./locations.html ">About</a>
             </li>
           </ul>
           <span class="navbar-text"> </span>
@@ -120,9 +87,19 @@
       <div class="container" id="heading1">
         <h1 class="display">Supply Chain Management</h1>
         <p>
-          This is a modified jumbotron that occupies the entire horizontal space
-          of its parent.
+          Whether you’re a producer, consumer or trader, SCM is setup to provide
+          its customers and strategic partners innovative, cost-effective
+          solutions to meet the demands of an ever-evolving supply chain.
         </p>
+        <button
+          type="button"
+          class="btn btn-primary"
+          id="truckingQuote"
+          data-toggle="modal"
+          data-target="#truckQuoteModal"
+        >
+          Get a Trucking Quote
+        </button>
       </div>
     </div>
 
@@ -280,22 +257,33 @@
         type="button"
         class="btn btn-outline-danger"
         id="getStarted-button"
-        data-toggle="modal" 
+        data-toggle="modal"
         data-target="#exampleModal"
       >
         Do It Now
       </button>
     </div>
 
-    <!-- Pop up modal to get started -->
-   
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-      aria-hidden="true">
+    <!-- Pop up modal for general inquiry-->
+
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <h5 class="modal-title" id="exampleModalLabel">Connect With SCM</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
@@ -305,24 +293,43 @@
                 <div class="col">
                   <div class="form-group">
                     <label for="firstName">First Name</label>
-                    <input type="name" class="form-control" id="firstName" placeholder="Bob">
+                    <input
+                      type="name"
+                      class="form-control"
+                      id="firstName"
+                      placeholder="Bob"
+                    />
                   </div>
                 </div>
                 <div class="col">
                   <div class="form-group">
                     <label for="lastName">Last Name</label>
-                    <input type="name" class="form-control" id="lastName" placeholder="Ross">
+                    <input
+                      type="name"
+                      class="form-control"
+                      id="lastName"
+                      placeholder="Ross"
+                    />
                   </div>
                 </div>
-
               </div>
               <div class="form-group">
                 <label for="company">Company</label>
-                <input type="email" class="form-control" id="company" placeholder="DickHouse">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="company"
+                  placeholder="DickHouse"
+                />
               </div>
               <div class="form-group">
                 <label for="emailAdress">Email address</label>
-                <input type="email" class="form-control" id="emailAdress" placeholder="name@example.com">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="emailAdress"
+                  placeholder="name@example.com"
+                />
               </div>
               <div class="form-group">
                 <label for="serviceType">I am Looking to</label>
@@ -331,10 +338,9 @@
                   <option>Become a Carrier Partner</option>
                   <option>Lease on with SCMI</option>
                   <option>Some other shit</option>
-                 
                 </select>
               </div>
-              
+
               <div class="form-group">
                 <label for="comment">Example textarea</label>
                 <textarea class="form-control" id="comment" rows="3"></textarea>
@@ -342,8 +348,103 @@
             </form>
           </div>
           <div class="modal-footer">
-            
-            <button type="button" class="btn btn-primary" id="submitButton">Submit</button>
+            <button type="button" class="btn btn-primary" id="submitButton">
+              Submit
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pop up modal to get trucking quote -->
+
+    <div
+      class="modal fade"
+      id="truckQuoteModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="truckQuoteModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="truckQuoteModalLabel">
+              Get A Trucking Quote
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="row">
+                <div class="col">
+                  <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input
+                      type="name"
+                      class="form-control"
+                      id="firstName"
+                      placeholder="Bob"
+                    />
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input
+                      type="name"
+                      class="form-control"
+                      id="lastName"
+                      placeholder="Ross"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="company">Company</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="company"
+                  placeholder="DickHouse"
+                />
+              </div>
+              <div class="form-group">
+                <label for="emailAdress">Email address</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="emailAdress"
+                  placeholder="name@example.com"
+                />
+              </div>
+              <div class="form-group">
+                <label for="serviceType">I am Looking to</label>
+                <select class="form-control" id="serviceType">
+                  <option>Ship a Commodity</option>
+                  <option>Become a Carrier Partner</option>
+                  <option>Lease on with SCMI</option>
+                  <option>Some other shit</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="comment">Example textarea</label>
+                <textarea class="form-control" id="comment" rows="3"></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" id="submitButton">
+              Submit
+            </button>
           </div>
         </div>
       </div>
