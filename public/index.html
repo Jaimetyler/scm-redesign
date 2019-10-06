@@ -1,576 +1,427 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Poppins&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="shortcut icon"
-      type="image/png"
-      href="./assets/images/scm-logo.png"
-    />
-    <title>Supply Chain Management</title>
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" type="text/css" href="./assets/css/styles.css" />
-    <script
-      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-      crossorigin="anonymous"
-    ></script>
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/6.6.1/firebase-app.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/6.6.1/firebase-auth.js"></script>
-    <script defer src="/__/firebase/6.6.1/firebase-database.js"></script>
-    <script defer src="/__/firebase/6.6.1/firebase-messaging.js"></script>
-    <script defer src="/__/firebase/6.6.1/firebase-storage.js"></script>
-    <!-- initialize the SDK after all desired features are loaded -->
-    <script defer src="/__/firebase/init.js"></script>
-  </head>
-  <body>
-    <!--LOGIN -->
 
-    <!--NAVBAR -->
-    <!-- Want to make this a sticky nav that is transparent until scroll and then like a black color with some level of opacity -->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet" />
+  <title>Supply Chain Management</title>
+  <!-- Link to Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+  <!-- Link to JQuery -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <!-- This is required for Bootstrap -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <!-- This looks like it is loading Bootstrap twice, but this is required for some reason. All modals stop working when you take this out. -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
 
-    <!--HEADER IMAGE WITH TEXT -->
-    <!-- Need to find a good image maybe of savannah port or even our new facility -->
-    <!-- Move text to the left of page on image, with maybe a button to get signed up as a carrier -->
+  <!-- CSS Style Sheet  -->
+  <link rel="stylesheet" type="text/css" href="./assets/css/styles.css" />
+  <!-- FIREBASE SCRIPT -->
+  <!-- update the version number as needed -->
+  <script defer src="/__/firebase/6.6.1/firebase-app.js"></script>
+  <!-- include only the Firebase features as you need -->
+  <script defer src="/__/firebase/6.6.1/firebase-auth.js"></script>
+  <script defer src="/__/firebase/6.6.1/firebase-database.js"></script>
+  <script defer src="/__/firebase/6.6.1/firebase-messaging.js"></script>
+  <script defer src="/__/firebase/6.6.1/firebase-storage.js"></script>
+  <!-- initialize the SDK after all desired features are loaded -->
+  <script defer src="/__/firebase/init.js"></script>
+</head>
 
-    <!-- this is an image background -->
-    <div class="jumbotron jumbotron-fluid">
-      <nav class="navbar navbar-expand-lg navbar-dark bg-none">
-        <a class="navbar-brand" href="#"></a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarText"
-          aria-controls="navbarText"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarText">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="./index.html"
-                >Home <span class="sr-only">(current)</span></a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./carriers.html">Carriers</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./ownerOperators.html"
-                >Owner Operators</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./warehouse.html">Warehouse</a>
-            </li>
+<body>
+  <!--NAVBAR -->
+  <!-- Want to make this a sticky nav that has no background until scroll and then like a black color with some level of opacity for a background -->
 
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                Logins
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a
-                  class="dropdown-item"
-                  href="https://sucm.loadtracking.com/im/home"
-                  >Carrier Login</a
-                >
-                <a
-                  class="dropdown-item"
-                  href="https://sucm.loadtracking.com:5678/aa/apps/"
-                  >Agent Login</a
-                >
-                <div class="dropdown-divider"></div>
-                <a
-                  class="dropdown-item"
-                  href="https://secure-wms.com/PresentationTier/LoginForm.aspx?3pl={e95a86e9-14e0-46c8-9d0e-4eeec374991a}"
-                  >Warehouse Login</a
-                >
-              </div>
-            </li>
-          </ul>
-          <span class="navbar-text"> </span>
-        </div>
-      </nav>
-      <div class="container" id="heading1">
-        <h1 class="display">Supply Chain Management</h1>
-        <p>
-          Whether you’re a producer, consumer or trader, SCM is setup to provide
-          its customers and strategic partners innovative, cost-effective
-          solutions to meet the demands of an ever-evolving supply chain.
-        </p>
-        <button
-          type="button"
-          class="btn btn-primary"
-          id="truckingQuote"
-          data-toggle="modal"
-          data-target="#truckQuoteModal"
-        >
-          Get a Trucking Quote
-        </button>
-      </div>
-    </div>
+  <!-- This Jumbotron is a Bootstrap component with Javascript/Jquery making it mobile responsive. This is acting as a container for the Nav,and main header for the page. The image is a background image being loaded from styles.css -->
+  <!-- Jquery being used somehow with this -->
+  <div class="jumbotron jumbotron-fluid">
+    <!-- Bootstrap Nav component. Collapsable on mobile with hambuger dropdown menu -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-none">
+      <a class="navbar-brand" href="#"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="./index.html">Home </a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="./carriers.html">Carriers</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="./ownerOperators.html">Owner Operators</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="./warehouse.html">Warehouse</a>
+          </li>
 
-    <!--HEADING PARAGRAPH -->
-    <!-- Padding to top and bottom -->
-
-    <div class="container" id="supplyChain">
-      <h4>
-        Our identity is rooted in the process of efficiently and
-        cost-effectively planning, implementing and controlling the operations
-        of a supply chain. With industry leading carrier payment terms and a
-        proven track record of delivering consistent freight to its carrier
-        partners, SCM has developed one of the top carrier networks in the
-        industry.
-      </h4>
-    </div>
-
-    <!--DESCRIPTION OF SERVICES CARDS -->
-
-    <div class="container">
-      <div class="card-deck">
-        <div class="card">
-          <img
-            src="https://www.placecage.com/c/150/100"
-            class="card-img-top"
-            alt="placeholder"
-          />
-          <div class="card-body">
-            <h4 class="card-title">Local Drayage</h4>
-            <p class="card-text">
-              Intermodal trucking and drayage solutions provide customers a
-              cost-effective, environmentally sensitive transportation option.
-              Close proximity between SCM’s warehousing operations and port
-              facilities in Savannah, Houston and Dallas provide SCM with the
-              unique ability to manage your cargo from its origin to the port.
-            </p>
-          </div>
-        </div>
-
-        <div class="card">
-          <img
-            src="https://www.fillmurray.com/g/150/100"
-            class="card-img-top"
-            alt="placeholder"
-          />
-          <div class="card-body">
-            <h4 class="card-title">Truckload Freight</h4>
-            <p class="card-text">
-              SCM’s trucking business utilizes advanced technology to broker
-              freight between a diverse customer and carrier base to
-              consistently generate efficient, reliable service for both
-              customers and carriers. SCM offers its customers and carriers
-              real-time load monitoring and accounts payable/receivable access
-              through its online platform.
-            </p>
-          </div>
-        </div>
-        <div class="card">
-          <img
-            src="https://www.placecage.com/150/100 "
-            class="card-img-top"
-            alt="placeholder"
-          />
-          <div class="card-body">
-            <h4 class="card-title">Warehousing and Distribution</h4>
-            <p class="card-text">
-              SCM is one of the largest 3PL providers of warehouse space in the
-              Southeast and also maintains a significant presence in Houston,
-              TX. SCM is on the forefront of warehousing technology, providing
-              its customers with easy to access, internet based, inventory
-              management solutions.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!--Some Other Content  - Maybe some stats or some shit? -->
-
-    <div class="container" id="logistics-solutions">
-      <div class="row d-flex justify-content-center">
-        <div class="col-md-4">
-          <div class="card">
-            <img class="logistics-icon" src="./assets/images/teamwork.png" />
-            <div class="card-body">
-              <h5 class="card-title">Title</h5>
-              <p class="card-text">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard
-              </p>
+          <li class="nav-item active dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Logins
+            </a>
+            <!-- These links are redirections to sites where customer/carriers can login to our third party sites -->
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="https://sucm.loadtracking.com/im/home">Carrier Login</a>
+              <a class="dropdown-item" href="https://sucm.loadtracking.com:5678/aa/apps/">Agent Login</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item"
+                href="https://secure-wms.com/PresentationTier/LoginForm.aspx?3pl={e95a86e9-14e0-46c8-9d0e-4eeec374991a}">Warehouse
+                Login</a>
             </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card">
-            <img
-              class="logistics-icon"
-              src="./assets/images/frontal-truck.png"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Title</h5>
-              <p class="card-text">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard
-              </p>
-            </div>
-          </div>
-        </div>
+          </li>
+        </ul>
+        <span class="navbar-text"> </span>
       </div>
-      <div class="row d-flex justify-content-center">
-        <div class="col-md-4">
-          <div class="card">
-            <img class="logistics-icon" src="./assets/images/headset.png" />
-            <div class="card-body">
-              <h5 class="card-title">Title</h5>
-              <p class="card-text">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card">
-            <img
-              class="logistics-icon"
-              src="./assets/images/map-perspective.png"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Title</h5>
-              <p class="card-text">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Some message about getting started or finding a solution -->
-
-    <div class="container" id="get-started">
-      <h2>
-        Find a Logistics Solution Today.
-      </h2>
-      <h5>
-        Get in touch with a representative today to help you find your solution
-        for Local Drayage, Over the Load Truckloads, storage and more.
-      </h5>
-
-      <button
-        type="button"
-        class="btn btn-outline-danger"
-        id="getStarted-button"
-        data-toggle="modal"
-        data-target="#exampleModal"
-      >
-        Connect With SCM
+    </nav>
+    <!-- This Container is a Bootstrap component that gives the container margin and padding and makes it mobile responsive -->
+    <div class="container" id="heading1">
+      <h1 class="display">Supply Chain Management</h1>
+      <p>
+        Whether you’re a producer, consumer or trader, SCM is setup to provide
+        its customers and strategic partners innovative, cost-effective
+        solutions to meet the demands of an ever-evolving supply chain.
+      </p>
+      <button type="button" class="btn btn-primary" id="truckingQuote" data-toggle="modal"
+        data-target="#truckQuoteModal">
+        Get a Trucking Quote
       </button>
     </div>
+  </div>
 
-    <!-- Pop up modal for general inquiry-->
+  <!--HEADING PARAGRAPH - This is a quick snippet of who the company is and what we offer to customers -->
+  <!-- This Container is a Bootstrap component that gives the container margin and padding and makes it mobile responsive -->
 
-    <div
-      class="modal fade"
-      id="exampleModal"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Connect With SCM</h5>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">&times;</span>
-            </button>
+  <div class="container" id="supplyChain">
+    <h4>
+      Our identity is rooted in the process of efficiently and
+      cost-effectively planning, implementing and controlling the operations
+      of a supply chain. With industry leading carrier payment terms and a
+      proven track record of delivering consistent freight to its carrier
+      partners, SCM has developed one of the top carrier networks in the
+      industry.
+    </h4>
+  </div>
+
+  <!--DESCRIPTION OF SERVICES CARDS -->
+  <!-- These cards are Bootstrap Components. card-deck is giving the three cards canned responsiveness and margins/padding. Sets up the grid for you automatically. Images are placeholders.  -->
+  <!-- These cards are sitting in another Bootstrap Container to keep in align with all other components on the page -->
+
+  <div class="container">
+    <div class="card-deck">
+      <div class="card">
+        <img src="https://www.placecage.com/c/150/100" class="card-img-top" alt="placeholder" />
+        <div class="card-body">
+          <h4 class="card-title">Local Drayage</h4>
+          <p class="card-text">
+            Intermodal trucking and drayage solutions provide customers a
+            cost-effective, environmentally sensitive transportation option.
+            Close proximity between SCM’s warehousing operations and port
+            facilities in Savannah, Houston and Dallas provide SCM with the
+            unique ability to manage your cargo from its origin to the port.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://www.fillmurray.com/g/150/100" class="card-img-top" alt="placeholder" />
+        <div class="card-body">
+          <h4 class="card-title">Truckload Freight</h4>
+          <p class="card-text">
+            SCM’s trucking business utilizes advanced technology to broker
+            freight between a diverse customer and carrier base to
+            consistently generate efficient, reliable service for both
+            customers and carriers. SCM offers its customers and carriers
+            real-time load monitoring and accounts payable/receivable access
+            through its online platform.
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://www.placecage.com/150/100 " class="card-img-top" alt="placeholder" />
+        <div class="card-body">
+          <h4 class="card-title">Warehousing and Distribution</h4>
+          <p class="card-text">
+            SCM is one of the largest 3PL providers of warehouse space in the
+            Southeast and also maintains a significant presence in Houston,
+            TX. SCM is on the forefront of warehousing technology, providing
+            its customers with easy to access, internet based, inventory
+            management solutions.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Some Other Content  - Maybe some stats or some shit? -->
+  <!-- This was really just added because Boss told me to Copy that one site and they had something like this here. Was going to get with them and see what kind of content they wanted to add here, if any. -->
+  <!-- These Cards is sitting in a Bootstrap Container and using bootstrap Grid system with rows and columns. d-flex justify-content-center is centering the content in the row. -->
+
+  <div class="container" id="logistics-solutions">
+    <div class="row d-flex justify-content-center">
+      <div class="col-md-4">
+        <div class="card">
+          <img class="logistics-icon" src="./assets/images/teamwork.png" />
+          <div class="card-body">
+            <h5 class="card-title">Title</h5>
+            <p class="card-text">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard
+            </p>
           </div>
-          <div class="modal-body">
-            <form>
-              <div class="row">
-                <div class="col">
-                  <div class="form-group">
-                    <label for="firstName">First Name</label>
-                    <input
-                      type="name"
-                      class="form-control"
-                      id="firstName"
-                      placeholder="Bob"
-                    />
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="form-group">
-                    <label for="lastName">Last Name</label>
-                    <input
-                      type="name"
-                      class="form-control"
-                      id="lastName"
-                      placeholder="Ross"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="company">Company</label>
-                <input
-                  type="email"
-                  class="form-control"
-                  id="company"
-                  placeholder="DickHouse"
-                />
-              </div>
-              <div class="form-group">
-                <label for="emailAdress">Email address</label>
-                <input
-                  type="email"
-                  class="form-control"
-                  id="emailAdress"
-                  placeholder="name@example.com"
-                />
-              </div>
-              <div class="form-group">
-                <label for="serviceType">I am Looking to</label>
-                <select class="form-control" id="serviceType">
-                  <option>Ship a Commodity</option>
-                  <option>Become a Carrier Partner</option>
-                  <option>Lease on with SCMI</option>
-                  <option>Some other shit</option>
-                </select>
-              </div>
-
-              <div class="form-group">
-                <label for="comment">Example textarea</label>
-                <textarea class="form-control" id="comment" rows="3"></textarea>
-              </div>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-primary"
-              data-toggle="modal"
-              data-target="#exampleModal"
-              id="sign-in-button"
-            >
-              Verify with Google
-            </button>
-            <button type="button" class="btn btn-primary" id="submitButton">
-              Submit
-            </button>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img class="logistics-icon" src="./assets/images/frontal-truck.png" />
+          <div class="card-body">
+            <h5 class="card-title">Title</h5>
+            <p class="card-text">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard
+            </p>
           </div>
         </div>
       </div>
     </div>
-
-    <!-- Pop up modal to get trucking quote -->
-
-    <div
-      class="modal fade"
-      id="truckQuoteModal"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="truckQuoteModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="truckQuoteModalLabel">
-              Get A Trucking Quote
-            </h5>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">&times;</span>
-            </button>
+    <div class="row d-flex justify-content-center">
+      <div class="col-md-4">
+        <div class="card">
+          <img class="logistics-icon" src="./assets/images/headset.png" />
+          <div class="card-body">
+            <h5 class="card-title">Title</h5>
+            <p class="card-text">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard
+            </p>
           </div>
-          <div class="modal-body">
-            <form>
-              <div class="row">
-                <div class="col">
-                  <div class="form-group">
-                    <label for="firstName">First Name</label>
-                    <input
-                      type="name"
-                      class="form-control"
-                      id="firstName"
-                      placeholder="Bob"
-                    />
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="form-group">
-                    <label for="lastName">Last Name</label>
-                    <input
-                      type="name"
-                      class="form-control"
-                      id="lastName"
-                      placeholder="Ross"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="company">Company</label>
-                <input
-                  type="email"
-                  class="form-control"
-                  id="company"
-                  placeholder="DickHouse"
-                />
-              </div>
-              <div class="form-group">
-                <label for="emailAdress">Email address</label>
-                <input
-                  type="email"
-                  class="form-control"
-                  id="emailAdress"
-                  placeholder="name@example.com"
-                />
-              </div>
-              <div class="form-group">
-                <label for="serviceType">I am Looking to</label>
-                <select class="form-control" id="serviceType">
-                  <option>Ship a Commodity</option>
-                  <option>Become a Carrier Partner</option>
-                  <option>Lease on with SCMI</option>
-                  <option>Some other shit</option>
-                </select>
-              </div>
-
-              <div class="form-group">
-                <label for="comment">Example textarea</label>
-                <textarea class="form-control" id="comment" rows="3"></textarea>
-              </div>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-primary"
-              data-toggle="modal"
-              data-target="#exampleModal"
-              id="sign-in-button"
-            >
-              Verify with Google
-            </button>
-            <button type="button" class="btn btn-primary" id="submitButton">
-              Submit
-            </button>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img class="logistics-icon" src="./assets/images/map-perspective.png" />
+          <div class="card-body">
+            <h5 class="card-title">Title</h5>
+            <p class="card-text">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard
+            </p>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- Modal for Google Auth, if someone wants to send an email -->
+  <!-- Some message about getting started or finding a solution -->
 
-    <!-- Modal -->
-    <div
-      class="modal fade"
-      id="sign-in-button"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            ...
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-dismiss="modal"
-            >
-              Close
-            </button>
-            <button
-              type="button"
-              class="btn btn-primary"
-              data-toggle="modal"
-              data-target="#exampleModal"
-              id="sign-in-button"
-            >
-              Verify with Google
-            </button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-          </div>
+  <div class="container" id="get-started">
+    <h2>
+      Find a Logistics Solution Today.
+    </h2>
+    <h5>
+      Get in touch with a representative today to help you find your solution
+      for Local Drayage, Over the Load Truckloads, storage and more.
+    </h5>
+    <!-- This button opens up the generalInquiry up to submit a general inquiry -->
+    <button type="button" class="btn btn-outline-danger" id="getStarted-button" data-toggle="modal"
+      data-target="#generalInquiry">
+      Connect With SCM
+    </button>
+  </div>
+
+  <!-- Pop up modal for general inquiry-->
+  <!-- These modals are Bootstrap components that are triggered by buttons on the page. The data target from a button is linked to the id of the modal. Modal fade class will give the fade effect when the modal is toggled. They are set to hidden until clicked to toggle. There is no javascript for this functionality -->
+
+  <div class="modal fade" id="generalInquiry" tabindex="-1" role="dialog" aria-labelledby="generalInquiryLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="generalInquiryLabel">
+            Connect With SCM
+          </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="row">
+              <div class="col">
+                <div class="form-group">
+                  <label for="firstName">First Name</label>
+                  <input type="name" class="form-control" id="firstName" placeholder="Bob" />
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-group">
+                  <label for="lastName">Last Name</label>
+                  <input type="name" class="form-control" id="lastName" placeholder="Ross" />
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="company">Company</label>
+              <input type="email" class="form-control" id="company" placeholder="DickHouse" />
+            </div>
+            <div class="form-group">
+              <label for="emailAdress">Email address</label>
+              <input type="email" class="form-control" id="emailAdress" placeholder="name@example.com" />
+            </div>
+            <div class="form-group">
+              <label for="serviceType">I am Looking to</label>
+              <select class="form-control" id="serviceType">
+                <option>Ship a Commodity</option>
+                <option>Become a Carrier Partner</option>
+                <option>Lease on with SCMI</option>
+                <option>Do Something Else</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="comment">Comment for Special Instructions</label>
+              <textarea class="form-control" id="comment" rows="3"></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#generalInquiry"
+            id="sign-in-button">
+            Verify with Google
+          </button>
+          <button type="button" class="btn btn-primary" id="submitButton">
+            Submit
+          </button>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- Footer -->
-    <footer class="bg-secondary text-white">
-      @jtmcDesigns
-      <div>
-        Icons made by
-        <a href="https://www.flaticon.com/authors/freepik" title="Freepik"
-          >Freepik</a
-        >
-        from
-        <a href="https://www.flaticon.com/" title="Flaticon"
-          >www.flaticon.com</a
-        >
+  <!-- Pop up modal to get trucking quote -->
+  <!-- These modals are Bootstrap components that are triggered by buttons on the page. The data target from a button is linked to the id of the modal. Modal fade class will give the fade effect when the modal is toggled. They are set to hidden until clicked to toggle. There is no javascript for this functionality -->
+
+  <div class="modal fade" id="truckQuoteModal" tabindex="-1" role="dialog" aria-labelledby="truckQuoteModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="truckQuoteModalLabel">
+            Get A Trucking Quote
+          </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="row">
+              <div class="col">
+                <div class="form-group">
+                  <label for="firstName">First Name</label>
+                  <input type="name" class="form-control" id="firstName" placeholder="Bob" />
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-group">
+                  <label for="lastName">Last Name</label>
+                  <input type="name" class="form-control" id="lastName" placeholder="Ross" />
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="company">Company</label>
+              <input type="email" class="form-control" id="company" placeholder="DickHouse" />
+            </div>
+            <div class="form-group">
+              <label for="emailAdress">Email address</label>
+              <input type="email" class="form-control" id="emailAdress" placeholder="name@example.com" />
+            </div>
+            <div class="form-group">
+              <label for="serviceType">I am Looking to</label>
+              <select class="form-control" id="serviceType">
+                <option>Ship a Commodity</option>
+                <option>Become a Carrier Partner</option>
+                <option>Lease on with SCMI</option>
+                <option>Some other shit</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="comment">Example textarea</label>
+              <textarea class="form-control" id="comment" rows="3"></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#generalInquiry"
+            id="sign-in-button">
+            Verify with Google
+          </button>
+          <button type="button" class="btn btn-primary" id="submitButton">
+            Submit
+          </button>
+        </div>
       </div>
-    </footer>
-    <script src="./assets/javascript/app.js"></script>
-    <script src="./assets/javascript/login.js"></script>
-  </body>
+    </div>
+  </div>
+
+  <!-- Modal for Google Auth, if someone wants to send an email -->
+
+  <!-- Modal -->
+  <div class="modal fade" id="sign-in-button" tabindex="-1" role="dialog" aria-labelledby="generalInquiryLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="generalInquiryLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">
+            Close
+          </button>
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#generalInquiry"
+            id="sign-in-button">
+            Verify with Google
+          </button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-secondary text-white">
+    @jtmcDesigns
+
+    <!-- This is giving credit to the dude who made these icons. Might not need these but he has a lot of cool ones. -->
+    <div>
+      Icons made by
+      <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a>
+      from
+      <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+    </div>
+  </footer>
+  <!-- This is loading script pages. -->
+  <script src="./assets/javascript/app.js"></script>
+  <script src="./assets/javascript/login.js"></script>
+</body>
+
 </html>
+
