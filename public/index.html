@@ -3,6 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
     <title>Supply Chain Management</title>
     <link
       rel="stylesheet"
@@ -37,6 +41,8 @@
     <script defer src="/__/firebase/init.js"></script>
   </head>
   <body>
+    <!--LOGIN -->
+
     <!--NAVBAR -->
     <!-- Want to make this a sticky nav that is transparent until scroll and then like a black color with some level of opacity -->
 
@@ -70,15 +76,44 @@
               <a class="nav-link" href="./carriers.html">Carriers</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./shippers.html">Shippers</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link" href="./ownerOperators.html"
                 >Owner Operators</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./locations.html ">About</a>
+              <a class="nav-link" href="./warehouse.html">Warehouse</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Logins
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a
+                  class="dropdown-item"
+                  href="https://sucm.loadtracking.com/im/home"
+                  >Carrier Login</a
+                >
+                <a
+                  class="dropdown-item"
+                  href="https://sucm.loadtracking.com:5678/aa/apps/"
+                  >Agent Login</a
+                >
+                <div class="dropdown-divider"></div>
+                <a
+                  class="dropdown-item"
+                  href="https://secure-wms.com/PresentationTier/LoginForm.aspx?3pl={e95a86e9-14e0-46c8-9d0e-4eeec374991a}"
+                  >Warehouse Login</a
+                >
+              </div>
             </li>
           </ul>
           <span class="navbar-text"> </span>
@@ -107,14 +142,14 @@
     <!-- Padding to top and bottom -->
 
     <div class="container" id="supplyChain">
-      <h3>
-        SCM - Supply Chain Management. Our identity is rooted in the process of
-        efficiently and cost-effectively planning, implementing and controlling
-        the operations of a supply chain. With industry leading carrier payment
-        terms and a proven track record of delivering consistent freight to its
-        carrier partners, SCM has developed one of the top carrier networks in
-        the industry.
-      </h3>
+      <h4>
+        Our identity is rooted in the process of efficiently and
+        cost-effectively planning, implementing and controlling the operations
+        of a supply chain. With industry leading carrier payment terms and a
+        proven track record of delivering consistent freight to its carrier
+        partners, SCM has developed one of the top carrier networks in the
+        industry.
+      </h4>
     </div>
 
     <!--DESCRIPTION OF SERVICES CARDS -->
@@ -128,12 +163,13 @@
             alt="placeholder"
           />
           <div class="card-body">
-            <h5 class="card-title">Title</h5>
+            <h4 class="card-title">Local Drayage</h4>
             <p class="card-text">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
+              Intermodal trucking and drayage solutions provide customers a
+              cost-effective, environmentally sensitive transportation option.
+              Close proximity between SCM’s warehousing operations and port
+              facilities in Savannah, Houston and Dallas provide SCM with the
+              unique ability to manage your cargo from its origin to the port.
             </p>
           </div>
         </div>
@@ -145,12 +181,14 @@
             alt="placeholder"
           />
           <div class="card-body">
-            <h5 class="card-title">Title</h5>
+            <h4 class="card-title">Truckload Freight</h4>
             <p class="card-text">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
+              SCM’s trucking business utilizes advanced technology to broker
+              freight between a diverse customer and carrier base to
+              consistently generate efficient, reliable service for both
+              customers and carriers. SCM offers its customers and carriers
+              real-time load monitoring and accounts payable/receivable access
+              through its online platform.
             </p>
           </div>
         </div>
@@ -161,12 +199,13 @@
             alt="placeholder"
           />
           <div class="card-body">
-            <h5 class="card-title">Title</h5>
+            <h4 class="card-title">Warehousing and Distribution</h4>
             <p class="card-text">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
+              SCM is one of the largest 3PL providers of warehouse space in the
+              Southeast and also maintains a significant presence in Houston,
+              TX. SCM is on the forefront of warehousing technology, providing
+              its customers with easy to access, internet based, inventory
+              management solutions.
             </p>
           </div>
         </div>
@@ -179,10 +218,7 @@
       <div class="row d-flex justify-content-center">
         <div class="col-md-4">
           <div class="card">
-            <img
-              class="logistics-icon"
-              src="./assets/images/collaboration.png"
-            />
+            <img class="logistics-icon" src="./assets/images/teamwork.png" />
             <div class="card-body">
               <h5 class="card-title">Title</h5>
               <p class="card-text">
@@ -196,7 +232,7 @@
           <div class="card">
             <img
               class="logistics-icon"
-              src="./assets/images/collaboration.png"
+              src="./assets/images/frontal-truck.png"
             />
             <div class="card-body">
               <h5 class="card-title">Title</h5>
@@ -211,10 +247,7 @@
       <div class="row d-flex justify-content-center">
         <div class="col-md-4">
           <div class="card">
-            <img
-              class="logistics-icon"
-              src="./assets/images/collaboration.png"
-            />
+            <img class="logistics-icon" src="./assets/images/headset.png" />
             <div class="card-body">
               <h5 class="card-title">Title</h5>
               <p class="card-text">
@@ -228,7 +261,7 @@
           <div class="card">
             <img
               class="logistics-icon"
-              src="./assets/images/collaboration.png"
+              src="./assets/images/map-perspective.png"
             />
             <div class="card-body">
               <h5 class="card-title">Title</h5>
@@ -245,13 +278,13 @@
     <!-- Some message about getting started or finding a solution -->
 
     <div class="container" id="get-started">
-      <h3>
-        Get started finding your logsitics solution today.
-      </h3>
-      <h6>
-        Dont waste any time, bitch.Get started finding your logsitics solution
-        today. Dont waste any time, bitch.
-      </h6>
+      <h2>
+        Find a Logistics Solution Today.
+      </h2>
+      <h5>
+        Get in touch with a representative today to help you find your solution
+        for Local Drayage, Over the Load Truckloads, storage and more.
+      </h5>
 
       <button
         type="button"
@@ -260,7 +293,7 @@
         data-toggle="modal"
         data-target="#exampleModal"
       >
-        Do It Now
+        Connect With SCM
       </button>
     </div>
 
@@ -348,6 +381,15 @@
             </form>
           </div>
           <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-toggle="modal"
+              data-target="#exampleModal"
+              id="sign-in-button"
+            >
+              Verify with Google
+            </button>
             <button type="button" class="btn btn-primary" id="submitButton">
               Submit
             </button>
@@ -442,6 +484,15 @@
             </form>
           </div>
           <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-toggle="modal"
+              data-target="#exampleModal"
+              id="sign-in-button"
+            >
+              Verify with Google
+            </button>
             <button type="button" class="btn btn-primary" id="submitButton">
               Submit
             </button>
@@ -450,8 +501,71 @@
       </div>
     </div>
 
+    <!-- Modal for Google Auth, if someone wants to send an email -->
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="sign-in-button"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-toggle="modal"
+              data-target="#exampleModal"
+              id="sign-in-button"
+            >
+              Verify with Google
+            </button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Footer -->
-    <footer class="bg-secondary text-white">@jtmcDesigns</footer>
+    <footer class="bg-secondary text-white">
+      @jtmcDesigns
+      <div>
+        Icons made by
+        <a href="https://www.flaticon.com/authors/freepik" title="Freepik"
+          >Freepik</a
+        >
+        from
+        <a href="https://www.flaticon.com/" title="Flaticon"
+          >www.flaticon.com</a
+        >
+      </div>
+    </footer>
     <script src="./assets/javascript/app.js"></script>
+    <script src="./assets/javascript/login.js"></script>
   </body>
 </html>
