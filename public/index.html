@@ -1,34 +1,62 @@
 <!DOCTYPE html>
-
 <html>
 <head>
     <meta charset=utf-8 />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SCM</title>
 
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="styles/main.css">
+
+    <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-firestore.js"></script>
 
 </head>
 
 <body>
 
-
-                    <!-- Button that handles sign-in/sign-out -->
-                    <button id="sign-in-button">
-                        Sign in
-                    </button>
+<button id="sign-in-button">
+    Sign in
+</button>
 
 
-<!-- Import and configure the Firebase SDK -->
-<!-- These scripts are made available when the app is served or deployed on Firebase Hosting -->
-<!-- If you do not serve/host your project using Firebase Hosting see https://firebase.google.com/docs/web/setup -->
-<script src="/__/firebase/6.5.0/firebase-app.js"></script>
-<script src="/__/firebase/6.5.0/firebase-auth.js"></script>
-<script src="/__/firebase/init.js"></script>
 
-<!--sign-in script for google auth-->
-<script src="scripts/sign-in.js"></script>
+<h1>SCM</h1>
 
+<div class="content">
+
+    <!--    first name, last name, company name, email address-->
+    <form id="add-user-form">
+        <input type="text" name="name" placeholder="name">
+        <input type="text" name="company" placeholder="company">
+        <input type="text" name="email" placeholder="email">
+        <button>Add</button>
+    </form>
+
+    <ul id="user-list"></ul>
+
+</div>
+
+<script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyCEehkaC-8U5007XmitXuHdkYMiD1skqqc",
+        authDomain: "scm2-94a82.firebaseapp.com",
+        databaseURL: "https://scm2-94a82.firebaseio.com",
+        projectId: "scm2-94a82",
+        storageBucket: "scm2-94a82.appspot.com",
+        messagingSenderId: "321283054862",
+        appId: "1:321283054862:web:b3f44ff4795f445fdb4b5f",
+        measurementId: "G-N5GYQV9V2B"
+    };
+    firebase.initializeApp(config);
+    const db = firebase.firestore();
+</script>
+
+<!--    auth script-->
+    <script src="scripts/sign-in.js"></script>
+<!--form script-->
+    <script src="scripts/firestore_form.js"></script>
 
 </body>
 </html>

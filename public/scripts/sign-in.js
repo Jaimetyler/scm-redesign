@@ -1,6 +1,7 @@
 
 // console.log("connected to sign-in.js");
 
+let globalUser = null;
     /**
      * Function called when clicking the Login/Logout button.
      */
@@ -62,6 +63,10 @@ function initApp() {
     // [START authstatelistener]
     firebase.auth().onAuthStateChanged(function(user) {
         if (user) {
+
+            // set user object to globaluser so can access outside this scope
+            globalUser = user;
+
             console.log(`DEBUG: ${user.displayName} is signed in`);
             // User is signed in.
             var displayName = user.displayName;
@@ -73,10 +78,14 @@ function initApp() {
             var providerData = user.providerData;
             // [START_EXCLUDE]
             // document.getElementById('quickstart-sign-in-status').textContent = 'Signed in';
-            document.getElementById('sign-in-button').textContent = 'Sign out';
+            document.getElementById('sign-in-button').textContent = 'Sign out ' + user.displayName;
             // document.getElementById('quickstart-account-details').textContent = JSON.stringify(user, null, '  ');
             // [END_EXCLUDE]
         } else {
+
+            // set globalUser to null to get rid of the user object since logged out
+            globalUser = null;
+
             console.log(`DEBUG: no user signed in`);
             // User is signed out.
             // [START_EXCLUDE]
